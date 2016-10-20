@@ -29,7 +29,7 @@
 \\ }
 \newcommand{\totalttc}{\TotalHT~kr}
 
-\newcommand{\tax}{
+\newcommand{\tax}{%
   \FPmul\temp{\TotalHT}{.25}
   \FPround\temp{\temp}{2}
   \temp~kr%
@@ -77,7 +77,7 @@ Kundvägen 123\\
 123 45~~Kundstaden
 
 
-\fancyput*(230pt,-172pt){
+\fancyput*(230pt,-172pt){%
     \begin{minipage}{85pt}
       \begin{tabular}{ll}
         \textbf{Er referens} & Kund Kundsson\\
