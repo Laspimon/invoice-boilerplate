@@ -1,6 +1,10 @@
 \documentclass[a4paper,11pt]{article}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}
+\setCJKmonofont{SimSun}
+
 \usepackage[utf8]{inputenc}
-\usepackage[swedish]{babel}
+\usepackage[danish]{babel}
 \usepackage[sc]{mathpazo}
 \usepackage{tabularx}
 \usepackage{fancyhdr}
@@ -62,7 +66,7 @@
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
-\fancyfoot[R]{\footnotesize Sida \thepage\ av \pageref{LastPage}}
+\fancyfoot[R]{\footnotesize Sida \thepage\ of \pageref{LastPage}}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -162,8 +166,8 @@ $billing-address-3$
       \textbf{Address:}     & \textbf{Bank Account}     & \textbf{CVR}      \\
         $company-name$      & $account-number$          & $CVR$             \\
         $company-address-1$ &                           &                   \\
-        $company-address-2$ &\textbf{Bank}              & \textbf{Momsreg}  \\
-        $company-address-3$ & $company-bank$            & $moms-reg$        \\
+        $company-address-2$ &\textbf{Bank}              &                   \\
+        $company-address-3$ & $company-bank$            &                   \\
       \end{tabularx}
     \end{minipage}}}
 
