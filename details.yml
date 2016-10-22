@@ -1,22 +1,31 @@
 ---
+# Fill out the information below, and run the command:
+#       make
+# 
+# The invoice will be build, and placed in the root folder.
+# 
+# Link to the Danish rules for invoices:
+# http://www.skat.dk/SKAT.aspx?oID=2068789
 company-name: Company Name
 company-address-1: company address line 1
 company-address-2: line 2
 company-address-3: line 3
-CVR: ABC123
-moms-reg: DEF456
+CVR: DK 12345678
 account-number: 1234-12345678
 company-bank: iBank
+service-provider: Service Provider
+payment-terms: Within 30 days of receipt
+author: Author name
+VAT: 25
+
+invoice-no: 2016-10-01
+invoice-date: 2016-10-21    
 billing-address-1: billing address line 1
 billing-address-2: line 2
 billing-address-3: line 3
 customer-reference: Customer Reference
-service-provider: Service Provider
-payment-terms: Within 30 days of receipt
-invoice-no: 2016-10-01
-invoice-date: 2016-10-21
-author: Author name
-VAT: 25
+
+# Always include date of job, unless identical to invoice-date!    
 service:
 - description: The first service provided
   price: 320.00
