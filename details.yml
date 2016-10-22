@@ -1,43 +1,40 @@
 ---
-invoice-nr: 2015-11-04
-author: Max Mustermann
-city: Musterstadt
-from:
-- Musterstraße 37
-- 12345 Musterstadt
-to:
-- Erika Mustermann
-- Musterallee 1
-- 12345 Musterstadt
-- Germany
-VAT: 20
+company-name: Company Name
+company-address-1: company address line 1
+company-address-2: line 2
+company-address-3: line 3
+CVR: ABC123
+moms-reg: DEF456
+account-number: 1234-12345678
+company-bank: iBank
+billing-address-1: billing address line 1
+billing-address-2: line 2
+billing-address-3: line 3
+customer-reference: Customer Reference
+service-provider: Service Provider
+payment-terms: Within 30 days of receipt
+invoice-no: 2016-10-01
+invoice-date: 2016-10-21
+author: Author name
+VAT: 25
 service:
 - description: The first service provided
   price: 320.00
+  quantity: 1
   details:
 - description: And another one, with a list of details
   price: 245.00
+  quantity: 3
   details:
     - Some more detailed explanation
     - of the service provided
     - Looking good
 - description: The last service provided
+  quantity: 1
   price: 65.00
 
-closingnote: |
-  Please transfer the due amount to the following bank account within the next 14 days:
-   
-    Mustermann GmbH  
-    Kreditinstitut: Deutsche Postbank AG  
-    IBAN: DE18 3601 0043 9999 9999 99  
-    BIC: PBNKDEFF  
-
-    We really appreciate your business and look forward to future projects together.
-
-    Best regards,
-
 # Invoice settings
-currency: EUR
+currency: DKK
 # commasep: true
 lang: english
 
