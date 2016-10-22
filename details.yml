@@ -16,7 +16,7 @@ company-bank: iBank
 service-provider: Service Provider
 payment-terms: Within 30 days of receipt
 author: Author name
-VAT: 25
+VAT: .25
 
 invoice-no: 2016-10-01
 invoice-date: 2016-10-21    
