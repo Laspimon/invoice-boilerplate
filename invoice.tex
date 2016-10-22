@@ -109,19 +109,48 @@ $billing-address-3$
 
 
 \renewcommand\arraystretch{1.5}
-\begin{tabular*}{\linewidth}{cp{8.9cm}rcr}\hline\hline
-\textbf{Post} & \textbf{Benämning}  & \multicolumn{1}{l}{\textbf{\`A-pris}} &  \multicolumn{1}{l}{\textbf{Antal}} & \multicolumn{1}{l}{\textbf{Summa}} \\
-\hline
-    \product{Datortillbehör}{8000.00}{1}
-    \product{Hårddisk, 500 gb}{1500.00}{3}
-    \product{Produkt nummer 3}{300.00}{10}
-    \product{Produkt nummer 4}{260.00}{5}
+\newcounter{pos}
+\setcounter{pos}{0}
 
-    &&&&\\[5em]
+\begin{tabular*}{\linewidth}{cp{7.9cm}rcr}
+  %\hdashline[1pt/1pt]
+    \hline\hline
+     \textbf{Entry} &
+     \textbf{Name} &
+     \multicolumn{1}{l}{\textbf{Price per unit}} &
+     \multicolumn{1}{l}{\textbf{Quantity}} &
+     \multicolumn{1}{l}{\textbf{Amount}} \\
+    \hline
+    $for(service)$
+        %\product{$service.description$}{$service.price$}{$service.quantity$}
+        %\\
+          \inc
+        & $service.description$
+            $if(service.details)$
+                \begin{itemize}
+                    $for(service.details)$
+                        \scriptsize
+                        \item $service.details$
+                    $endfor$
+                \end{itemize}
+            $endif$
+        & \FPround\two{$service.price$}{2}\two~$currency$
+        & $service.quantity$
+        & \FPmul\temp{$service.price$}{$service.quantity$}\FPround\temp{\temp}{2}\temp~$currency$
+        %% Totalize
+        \FPadd\total{\TotalHT}{\temp}%
+        \FPround\total{\total}{2}%
+        \global\let\TotalHT\total%
+        \\
 
-    \multicolumn{4}{r@{~~~}}{\textbf{Moms (25 \%)}} & \tax\\
-    \multicolumn{4}{r@{~~~}}{\textbf{Att betala}} & \totalttc\\
-\hline\hline
+    $endfor$
+    \noalign{\vskip 2mm}
+    \hline
+    %&&&&\\[1em]
+
+    \multicolumn{4}{r@{~~~}}{\textbf{VAT (Moms) ($VAT$ \%)}} & \tax\\
+    \multicolumn{4}{r@{~~~}}{\textbf{Total (At betale)}} & \totalttc\\
+    \hline\hline
 \end{tabular*}
 \renewcommand\arraystretch{1}
 
