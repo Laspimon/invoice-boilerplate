@@ -19,7 +19,7 @@ author: Author name
 VAT: .25
 
 invoice-no: 2016-10-01
-invoice-date: 23. October, 2016
+invoice-date: 23\. October, 2016
 billing-address-1: billing address line 1
 billing-address-2: line 2
 billing-address-3: line 3
