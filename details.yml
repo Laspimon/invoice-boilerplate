@@ -28,7 +28,7 @@ billing-address-2: line 2
 billing-address-3: line 3
 customer-reference: Customer Reference
 
-# Always include date of job, unless identical to invoice-date!    
+# Always include date of job, unless identical to invoice-date!
 service:
 - description: The first service provided
   price: 320.00
