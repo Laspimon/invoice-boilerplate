@@ -97,7 +97,8 @@
 \textbf{Billing address:}\\[1em]
 $billing-address-1$\\
 $billing-address-2$\\
-$billing-address-3$
+$billing-address-3$\\
+$billing-address-4$
 
 
 \fancyput*(230pt,-172pt){%
@@ -159,15 +160,22 @@ $billing-address-3$
 \renewcommand\arraystretch{1}
 
 
-
 \fancyput*(-17pt,-670pt){\mbox{%
     \begin{minipage}{530pt}
       \begin{tabularx}{530pt}{XXX}
-      \textbf{Address:}     & \textbf{Bank Account}     & \textbf{CVR}      \\
-        $company-name$      & $account-number$          & $CVR$             \\
-        $company-address-1$ &                           &                   \\
-        $company-address-2$ &\textbf{Bank}              &                   \\
-        $company-address-3$ & $company-bank$            &                   \\
+        $if(international)$
+            \textbf{Address:}   & \textbf{CVR}              & \textbf{IBAN}     \\
+            $company-name$      & $CVR$                     & $IBAN$            \\
+            $company-address-1$ &                           &                   \\
+            $company-address-2$ &\textbf{Bank}              & \textbf{SWIFT}    \\
+            $company-address-3$ & $company-bank$            & $IBAN$            \\
+        $else$
+            \textbf{Address:}   & \textbf{CVR}              & \textbf{Bank Account} \\
+            $company-name$      & $CVR$                     & $account-number$  \\
+            $company-address-1$ &                           &                   \\
+            $company-address-2$ &\textbf{Bank}              &                   \\
+            $company-address-3$ & $company-bank$            &                   \\
+        $endif$
       \end{tabularx}
     \end{minipage}}}
 

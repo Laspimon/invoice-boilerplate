@@ -6,12 +6,15 @@
 # 
 # Link to the Danish rules for invoices:
 # http://www.skat.dk/SKAT.aspx?oID=2068789
+international: false
 company-name: Company Name
 company-address-1: company address line 1
 company-address-2: line 2
 company-address-3: line 3
 CVR: DK 12345678
 account-number: 1234-12345678
+IBAN: DK****************
+SWIFT: ********
 company-bank: iBank
 service-provider: Service Provider
 payment-terms: Within 30 days of receipt
