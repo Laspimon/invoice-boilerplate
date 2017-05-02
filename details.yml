@@ -19,7 +19,6 @@ company-bank: iBank
 service-provider: Service Provider
 payment-terms: Within 30 days of receipt
 author: Author name
-VAT: .25
 
 invoice-no: 2016-10-01
 invoice-date: 23\. October, 2016
@@ -49,6 +48,8 @@ service:
 currency: DKK
 # commasep: true
 lang: english
+
+VAT: .25
 
 # Typography and layout
 seriffont: Hoefler Text
